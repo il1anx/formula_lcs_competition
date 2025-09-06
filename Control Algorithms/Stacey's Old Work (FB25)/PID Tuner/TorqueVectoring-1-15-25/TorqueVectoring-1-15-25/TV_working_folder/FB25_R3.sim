@@ -1,0 +1,26 @@
+SIMFILE
+
+SET_MACRO $(ROOT_FILE_NAME)$ Run_ac02de3e-a812-4007-9fd1-4896dc9b6542
+SET_MACRO $(OUTPUT_PATH)$ C:\Users\kara.28\Documents\GitHub\FB_CarSIm-Models\FB25 carsim model\Carsim models\FB25_v1b\Results
+SET_MACRO $(WORK_DIR)$ C:\Users\kara.28\Documents\GitHub\FB_CarSIm-Models\FB25 carsim model\Carsim models\FB25_v1b\
+SET_MACRO $(OUTPUT_FILE_PREFIX)$ $(WORK_DIR)$Results\Run_ac02de3e-a812-4007-9fd1-4896dc9b6542\LastRun
+
+FILEBASE $(OUTPUT_FILE_PREFIX)$
+INPUT $(WORK_DIR)$Results\$(ROOT_FILE_NAME)$\Run_all.par
+INPUTARCHIVE $(OUTPUT_FILE_PREFIX)$_all.par
+ECHO $(OUTPUT_FILE_PREFIX)$_echo.par
+FINAL $(OUTPUT_FILE_PREFIX)$_end.par
+LOGFILE $(OUTPUT_FILE_PREFIX)$_log.txt
+ERDFILE $(OUTPUT_FILE_PREFIX)$.csv
+PROGDIR C:\Program Files (x86)\CarSim2024.2_Prog\
+DATADIR C:\Users\kara.28\Documents\GitHub\FB_CarSIm-Models\FB25 carsim model\Carsim models\FB25_v1b\
+GUI_REFRESH_V CarSim_RefreshEvent_16252
+PRODUCT_ID CarSim
+PRODUCT_VER 2024.2
+VEHICLE_CODE i_i
+EXT_MODEL_STEP 0.00050000
+PORTS_IMP 0
+PORTS_EXP 0
+
+DLLFILE C:\Program Files (x86)\CarSim2024.2_Prog\Programs\solvers\carsim_64.dll
+END
