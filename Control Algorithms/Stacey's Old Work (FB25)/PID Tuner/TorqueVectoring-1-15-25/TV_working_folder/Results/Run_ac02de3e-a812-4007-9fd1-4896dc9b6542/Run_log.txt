@@ -1,0 +1,8 @@
+Run made by CarSim 2025.1 at 18:50 on September 06, 2025.
+Revision 247086, April 2, 2025
+Started with simfile: simfile.sim
+
+
+The run stopped at T = 0 because there was a problem opening PARSFILE "Results\Run_ac02de3e-a812-4007-9fd1-4896dc9b6542\Run_all.par".
+No such file or directory.
+
