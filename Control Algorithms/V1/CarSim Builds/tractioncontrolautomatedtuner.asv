@@ -1,0 +1,38 @@
+% Define parameter ranges to test
+slip_ratios = linspace(0.02, 1, 20);  % Different slip ratio thresholds
+cut_percents = linspace(0,1,20);           % Different traction power cut percentages
+
+% Initialize results storage
+results = [];
+
+% Loop through all parameter combinations
+for i = 1:length(slip_ratios)
+    for j = 1:length(cut_percents)
+        
+        % Set parameters in base workspace (so Simulink can access them)
+        assignin('base', 'kappa_thresh', slip_ratios(i));
+        assignin('base', 'TC_CUT', cut_percents(j));
+        
+        % Run simulation
+        simOut = sim('cbuildv1p0.'); % Adjust stop time as needed
+        
+        % Extract simulation results
+        % Assuming you have a signal that tracks distance or acceleration time
+        time_to_complete = extractAccelerationTime(simOut);
+        
+        % Store results
+        results(i,j).slip_ratio = slip_ratios(i);
+        results(i,j).cut_percent = cut_percents(j);
+        results(i,j).acceleration_time = time_to_complete;
+        results(i,j).simulation_data = simOut;
+        
+        fprintf('Completed: Slip Ratio=%.3f, Cut Percent=%.1f, Time=%.2fs\n', ...
+                slip_ratios(i), cut_percents(j), time_to_complete);
+    end
+end
+
+% Save results
+save('traction_control_analysis.mat', 'results');
+
+% Plot results
+plotResults(results);

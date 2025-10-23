@@ -14,7 +14,7 @@ LOGFILE $(OUTPUT_FILE_PREFIX)$_log.txt
 ERDFILE $(OUTPUT_FILE_PREFIX)$.vs
 PROGDIR C:\Program Files (x86)\CarSim2025.1_Prog\
 DATADIR C:\GITHUB\FB_CarSim-Models\Formula Buckeyes CarSim Database\
-GUI_REFRESH_V CarSim_RefreshEvent_21816
+GUI_REFRESH_V CarSim_RefreshEvent_14720
 PRODUCT_ID CarSim
 PRODUCT_VER 2025.1
 VEHICLE_CODE i_i
