@@ -1,0 +1,18 @@
+Real data size: 353673 x 3
+Sim data size: 117949 x 5
+Arrays have different sizes. Interpolating to common time base...
+
+Comparison Metrics:
+===================
+Voltage Statistics:
+  RMSE: 0.3149 V
+  Max Error: 0.7715 V
+  Mean Error: -0.3096 V
+
+Temperature Statistics:
+  RMSE: 1.8982 °C
+  Max Error: 3.2662 °C
+  Mean Error: 1.9646 °C
+
+Plot generation complete.
+Data points used for comparison: 465044
