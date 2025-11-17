@@ -1,10 +1,13 @@
 %% Plotter tool for Step Steer Tests by Mehmet Kara %%
 
+clear
+clc
+
 %% Obtain the time and target yaw rate matrices from the 0 gain run
 load("0/targetyawrate.mat");  % Load without assignment - goes to ans
 r_target_mat = ans;
-time = r_target_mat(1, 1:667);
-r_target = r_target_mat(2, 1:667);
+time = r_target_mat(1, 1:4001);
+r_target = r_target_mat(2, 1:4001);
 clear ans
 
 %% Obtain the yaw rates from each run
@@ -45,7 +48,7 @@ plot(time, r_0p1, 'm', 'DisplayName', '0.1 Gain');
 hold off
 
 xlabel('Time (s)');
-ylabel('Yaw Rate (rad/s)');
+ylabel('Yaw Rate (deg/s)');
 title('Step Steer Test - Yaw Rate Response');
 legend('show');
 grid on;
