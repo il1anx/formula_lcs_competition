@@ -1,0 +1,5 @@
+INFO - MF-Tyre/MF-Swift 2412  (114f4aaf74ac)
+WARNING - Vertical load is below tire file parameter FZMIN. It is capped at (200).
+WARNING - Longitudinal slip is above tire file maximum parameter KPUMAX. It is capped at (0.75).
+WARNING - Longitudinal slip is below tire file parameter KPUMIN. It is capped at (-0.75).
+WARNING - Slip angle is above tire file maximum parameter ALPMAX. It is capped at (0.752361).
