@@ -1,0 +1,25 @@
+SIMFILE
+
+SET_MACRO $(ROOT_FILE_NAME)$ Run_df1c971c-269f-4b8e-92a7-a2c9494525a7
+SET_MACRO $(OUTPUT_PATH)$ C:\Users\kara.28\Documents\GitHub\FB_CarSim\DiL Models\Formula Buckeyes CarSim Database\Results
+SET_MACRO $(WORK_DIR)$ C:\Users\kara.28\Documents\GitHub\FB_CarSim\DiL Models\Formula Buckeyes CarSim Database\
+SET_MACRO $(OUTPUT_FILE_PREFIX)$ $(OUTPUT_PATH)$\$(ROOT_FILE_NAME)$\$(TIMESTAMP)$
+
+FILEBASE $(OUTPUT_FILE_PREFIX)$
+INPUT $(WORK_DIR)$Results\$(ROOT_FILE_NAME)$\Run_all.par
+INPUTARCHIVE $(OUTPUT_FILE_PREFIX)$_all.par
+ECHO $(OUTPUT_FILE_PREFIX)$_echo.par
+FINAL $(OUTPUT_FILE_PREFIX)$_end.par
+LOGFILE $(OUTPUT_FILE_PREFIX)$_log.txt
+ERDFILE $(OUTPUT_FILE_PREFIX)$.vs
+PROGDIR C:\Program Files (x86)\CarSim2024.2_Prog\
+DATADIR C:\Users\kara.28\Documents\GitHub\FB_CarSim\DiL Models\Formula Buckeyes CarSim Database\
+GUI_REFRESH_V CarSim_RefreshEvent_75056
+PRODUCT_ID CarSim
+PRODUCT_VER 2024.2
+VEHICLE_CODE i_i
+EXT_MODEL_STEP 0.00200000
+PORTS_IMP 1,8
+PORTS_EXP 1,8
+
+END
