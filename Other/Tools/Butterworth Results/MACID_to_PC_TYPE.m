@@ -10,3 +10,7 @@
     % CPU: Intel core i7 8860H
     % RAM: 16GB DDR4 4800 MT/s
     % Average performance: 756 ops/sec
+%% 20-88-10-E1-66-2E = Dell Precision 3660 (Scott E205 computers)
+    % CPU: Intel Core i7 13700 (16 cores @ 4.6 GHz)
+    % RAM: 32GB DDR4 4400 MT/S
+    % Average performance: 2661 ops/sec
