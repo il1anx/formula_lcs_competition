@@ -30,5 +30,5 @@
     % CPU: Intel Xeon W2123 (4 cores @ 3.6 GHz)
     % RAM: 32GB DDR4 2666 MT/s
     % GPU: NVIDIA Quadro P2000 (5GB VRAM)
-        % Supports acceleration: STAR, ANSYS, MATLAB
+        % Supports acceleration: STAR, MATLAB
     % Average single core performance: 1006 ops/sec
