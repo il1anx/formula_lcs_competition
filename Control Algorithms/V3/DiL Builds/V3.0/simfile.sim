@@ -12,11 +12,11 @@ ECHO $(OUTPUT_FILE_PREFIX)$_echo.par
 FINAL $(OUTPUT_FILE_PREFIX)$_end.par
 LOGFILE $(OUTPUT_FILE_PREFIX)$_log.txt
 ERDFILE $(OUTPUT_FILE_PREFIX)$.vs
-PROGDIR C:\Program Files (x86)\CarSim2024.2_Prog\
+PROGDIR C:\Users\kara.28\AppData\Local\CarSim2025.1_Prog\
 DATADIR C:\Users\kara.28\Documents\GitHub\FB_CarSim\DiL Models\Formula Buckeyes CarSim Database\
-GUI_REFRESH_V CarSim_RefreshEvent_75056
+GUI_REFRESH_V CarSim_RefreshEvent_105104
 PRODUCT_ID CarSim
-PRODUCT_VER 2024.2
+PRODUCT_VER 2025.1
 VEHICLE_CODE i_i
 EXT_MODEL_STEP 0.00200000
 PORTS_IMP 1,8
