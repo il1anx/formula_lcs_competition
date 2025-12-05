@@ -32,3 +32,10 @@
     % GPU: NVIDIA Quadro P2000 (5GB VRAM)
         % Supports acceleration: STAR, MATLAB
     % Average single core performance: 1006 ops/sec
+
+%%  58-11-22-8C-16-D1 = Custom Gaming PC (Mehmet's desktop)
+    % CPU: AMD Ryzen 5700X (8 cores @ 4.6 GHz)
+    % RAM: 48GB DDR4 3600 MT/s
+    % GPU: NVIDIA RTX 3060 (12GB VRAM)
+        % Supports acceleration: STAR, MATLAB
+    % Average single core performance: 1941 ops/sec
