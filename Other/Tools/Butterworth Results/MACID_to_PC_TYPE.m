@@ -39,3 +39,10 @@
     % GPU: NVIDIA RTX 3060 (12GB VRAM)
         % Supports acceleration: STAR, MATLAB
     % Average single core performance: 1941 ops/sec
+
+%% B8-85-84-C1-E9-DF = Alienware R8 (DiL Physics PC)
+    % CPU: Intel Core i9-9990K (8 cores @ 5GHz)
+    % RAM: 64GB DDR4 2666 MT/s
+    % GPU: NVIDIA GTX 1070ti (8GB VRAM)
+        % Supports acceleration: none
+    % Average single core performance: 1383.13 ops/sec
