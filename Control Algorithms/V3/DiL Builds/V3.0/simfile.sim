@@ -14,12 +14,12 @@ LOGFILE $(OUTPUT_FILE_PREFIX)$_log.txt
 ERDFILE $(OUTPUT_FILE_PREFIX)$.csv
 PROGDIR C:\Users\kara.28\AppData\Local\CarSim2025.1_Prog\
 DATADIR C:\Users\kara.28\Documents\GitHub\FB_CarSim\DiL Models\Formula Buckeyes CarSim Database\
-GUI_REFRESH_V CarSim_RefreshEvent_26360
+GUI_REFRESH_V CarSim_RefreshEvent_1392
 PRODUCT_ID CarSim
 PRODUCT_VER 2025.1
 VEHICLE_CODE i_i
 EXT_MODEL_STEP 0.00100000
-PORTS_IMP 1,12
+PORTS_IMP 1,13
 PORTS_EXP 1,8
 
 END
