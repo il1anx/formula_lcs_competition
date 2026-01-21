@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "logo")(type "KiCad")(uri "/Users/account/Documents/GitHub/FB26_Controls/Other/Module Temperature Reader")(options "")(descr ""))
+)
