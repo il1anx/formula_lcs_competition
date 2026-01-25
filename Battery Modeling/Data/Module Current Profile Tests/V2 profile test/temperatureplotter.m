@@ -1,0 +1,83 @@
+%% Description
+
+% This is a program that takes the .CSV output file from the arbin and
+% plots the module temperature sensor results
+
+%% Code Start
+
+clear; clear all; clc
+
+% Read the module temp sensor LUT (voltage to temp)
+% Format: [Temperature_C, Voltage_V]
+LUT = [ -40, 2.44; -35, 2.42; -30, 2.34; -25, 2.38; -20, 2.35; ...
+        -15, 2.32; -10, 2.27; -5,  2.23;  0,  2.17;  5,  2.11; ...
+         10, 2.05;  15, 1.99;  20, 1.92;  25, 1.86;  30, 1.80; ...
+         35, 1.74;  40, 1.68;  45, 1.63;  50, 1.59;  55, 1.55; ...
+         60, 1.51;  65, 1.48;  70, 1.45;  75, 1.43;  80, 1.40; ...
+         85, 1.38;  90, 1.37;  95, 1.35; 100, 1.34; 105, 1.33; ...
+        110, 1.32; 115, 1.31; 120, 1.30 ];
+tempLUT = LUT(:, 1); 
+voltLUT = LUT(:, 2);
+
+% Read and load the relavant sensor channels from the Arbin data output
+colsToKeep = [2, ... Time (s)
+    6, ... Voltage (V)
+    7, ... Current (A)
+    8, ... Charge Capacity (Ah)
+    9,... Disharge Capacity (Ah)
+    15,... Module sensor voltage (V)
+    16,... Hotspot thermocouple 1 (C)
+    17,... Hotspot thermocouple 2 (C)
+    18,... Hotspot thermocouple 3 (C)
+    19,... Hotspot thermocouple 4 (C)
+    20 % Surface temp thermocouple 1 (C)
+    ]; 
+arbindata = readtable("arbindata.xlsx", 'Sheet', 'Channel5_1');
+arbindata = arbindata(:, colsToKeep); % Truncates the table\
+
+% Combine the discharge and charge energy over time 
+capacityused = arbindata{:, 4} + arbindata{:, 5};
+
+% Divide by 5*3ah to get the reduction of SoC in the module
+SoCused = capacityused / 15; 
+SoCusedwithoutregen = arbindata{:,5} / 15; % Obtains the ~ SoC if regen never happened
+
+% Interpolate the calibration data to get module temp from voltage reading
+moduletemp = interp1(voltLUT, tempLUT, arbindata{:,6}); 
+
+%% Plotting
+
+% Plot the 6 temperature readings over time
+figure(1)
+plot(arbindata{:,1}, moduletemp,...
+    arbindata{:,1}, arbindata{:, 7},...
+    arbindata{:,1}, arbindata{:, 8},...
+    arbindata{:,1}, arbindata{:, 9},...
+    arbindata{:,1}, arbindata{:, 10},...
+    arbindata{:,1}, arbindata{:, 11} )
+title('Module Temperature Sensor Plot')
+xlabel('Time (s)')
+ylabel('Temperature (C)')
+legend('Built-in Sensor Reading', 'Hotspot Thermocouple 1', 'Hotspot Thermocouple 2', 'Hotspot Thermocouple 3', 'Hotspot Thermocouple 4', 'Surface Thermocouple', 'Location','best')
+
+% Plot the current over time
+figure(2)
+plot(arbindata{:,1}, arbindata{:,3})
+title('Current Plot')
+xlabel('Time (s)')
+ylabel('Current (A)')
+
+% Plot the voltage of the module over time 
+figure(3)
+plot(arbindata{:,1}, arbindata{:,2})
+title('Voltage Plot')
+xlabel('Time (s)')
+ylabel('Voltage (V)')
+
+% Plot the SoC over time
+figure(4)
+plot(arbindata{:,1}, SoCused, arbindata{:,1}, SoCusedwithoutregen)
+title('SoC Usage Plot')
+xlabel('Time (s)')
+ylabel('SoC Used (-)')
+legend('SoC Usage', 'SoC Usage Without Regen')
